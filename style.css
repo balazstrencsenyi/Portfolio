@@ -108,7 +108,11 @@ h1 {
 }
 
 header.scroll h1 {
-  color: black;
+  background: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
+  -webkit-background-clip: text; /* For Safari */
+  -webkit-text-fill-color: transparent; /* For Safari */
+  background-clip: text;
+  letter-spacing: .05em;
 }
 
 
