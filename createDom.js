@@ -23,7 +23,13 @@ export function buttonHandler() {
       } else if (e.target.innerText === "Portfolio") {
         createPortfolio();
       }
-      // Add conditions for other buttons if necessary
+      else if (e.target.innerText === "Experience") {
+        createExperience();
+      }
+      else if (e.target.innerText === "Contact") {
+        createContact();
+      }
+  
     });
   });
 }
@@ -128,4 +134,43 @@ export function createPortfolio() {
 
   return portfolioPage;
 }
+
+export function createExperience() {
+  const experiencePage = createEl("div");
+  experiencePage.classList.add("experience-page");
+
+  const experienceText = createEl("div");
+  experienceText.classList.add("experience-text");
+  experienceText.innerText = "This is my experience page where I will showcase my jobs. Stay tuned! ";
+
+  experiencePage.append(experienceText);
+
+  root.innerHTML = ""; // Clear root content
+  root.style.height = "100vh";
+  root.append(createHeader(), experiencePage, createNavBar()); // Rebuild the content
+
+  buttonHandler();
+
+  return experiencePage;
+}
+
+export function createContact() {
+  const contactPage = createEl("div");
+  contactPage.classList.add("contact-page");
+
+  const contactText = createEl("div");
+  contactText.classList.add("contact-text");
+  contactText.innerText = "This is my contact page where I will showcase my contacts. Stay tuned! ";
+
+  contactPage.append(contactText);
+
+  root.innerHTML = ""; // Clear root content
+  root.style.height = "100vh";
+  root.append(createHeader(), contactPage, createNavBar()); // Rebuild the content
+
+  buttonHandler();
+
+  return contactPage;
+}
+
 

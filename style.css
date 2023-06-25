@@ -154,3 +154,55 @@ header.scroll h1 {
 
 
 }
+
+.experience-page {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 1px rgb(255, 255, 255);
+  height: auto;
+  width: 400px;
+  border-radius: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  flex-direction: column;
+
+}
+
+.contact-page {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 1px rgb(255, 255, 255);
+  height: auto;
+  width: 400px;
+  border-radius: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  flex-direction: column;
+}
+
+
+.slide-in {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
