@@ -20,10 +20,14 @@ export function buttonHandler() {
         createMain();
       } else if (e.target.innerText === "Education") {
         createEducation();
+      } else if (e.target.innerText === "Portfolio") {
+        createPortfolio();
       }
+      // Add conditions for other buttons if necessary
     });
   });
 }
+
 
 export function createNavBar() {
   const navBar = createEl("div");
@@ -105,3 +109,23 @@ export function createEducation() {
 
   return educationPage;
 }
+
+export function createPortfolio() {
+  const portfolioPage = createEl("div");
+  portfolioPage.classList.add("portfolio-page");
+
+  const portfolioText = createEl("div");
+  portfolioText.classList.add("portfolio-text");
+  portfolioText.innerText = "This is my portfolio page where I will showcase my projects. Stay tuned!";
+
+  portfolioPage.append(portfolioText);
+
+  root.innerHTML = ""; // Clear root content
+  root.style.height = "100vh";
+  root.append(createHeader(), portfolioPage, createNavBar()); // Rebuild the content
+
+  buttonHandler();
+
+  return portfolioPage;
+}
+

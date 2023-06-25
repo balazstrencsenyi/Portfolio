@@ -47,7 +47,6 @@ header.scroll h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
 
 }
 
@@ -134,4 +133,24 @@ header.scroll h1 {
 
 .education-text {
   font-size: 25px;
+}
+
+.portfolio-page {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: solid 1px rgb(255, 255, 255);
+  height: auto;
+  width: 400px;
+  border-radius: 30px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  flex-direction: column;
+
+
 }
