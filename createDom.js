@@ -116,6 +116,7 @@ export function createMain() {
 export function createEducation() {
   const educationPage = createEl("div");
   educationPage.classList.add("education-page");
+  educationPage.style.height = "105vh"; // Set the height of educationPage
 
   const educationText = createEl("div");
   educationText.classList.add("education-text");
@@ -124,15 +125,18 @@ export function createEducation() {
 
   educationPage.append(educationText);
 
-  root.innerHTML = ""; // Clear root content
-  //add a root height of 200vh to make the page scrollable only here
-  root.style.height = "160vh";
+  // Clear the existing content inside root
+  root.innerHTML = "";
+
   root.append(educationPage, createNavBar()); // Rebuild the content
 
   buttonHandler();
 
   return educationPage;
 }
+
+
+
 
 export function createPortfolio() {
   const portfolioPage = createEl("div");

@@ -191,7 +191,7 @@ header.scroll h1 {
   top: 65%;
   transform: translate(-50%, -50%);
   border: solid 1px rgb(255, 255, 255);
-  height: auto;
+  height: 500px;
   width: 800px;
   border-radius: 30px;
   color: white;
