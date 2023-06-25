@@ -56,8 +56,10 @@ h1 {
 }
 
 .nav-bar {
-  position: absolute;
+  position: fixed;
+  top: 50%;
   left: 5%;
+  transform: translate(-5%, -50%);
   height: 400px;
   width: 200px;
   border-radius: 30px;
@@ -93,7 +95,7 @@ h1 {
 .main-text-container {
   position: absolute;
   left: 50%;
-  top: 55%;
+  top: 50%;
   transform: translate(-50%, -50%);
   color: white;
   height: 400px;

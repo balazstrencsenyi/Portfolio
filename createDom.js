@@ -8,10 +8,7 @@ export function createHeader () {
   return header;
 }
 
-export function createMain () {
-  const main = createEl("div");
-  main.classList.add("main");
-
+export function createNavBar () {
   const navBar = createEl("div");
   navBar.classList.add("nav-bar");
 
@@ -37,6 +34,20 @@ export function createMain () {
   navEl5.innerText = "Contact";
   navEl5.id = "lower-item";
 
+  navBar.append(navEl1, navEl2, navEl3, navEl4, navEl5);
+
+  const root = document.querySelector("#root");
+
+  root.append(navBar);
+
+  return navBar;
+}
+
+
+export function createMain () {
+  const main = createEl("div");
+  main.classList.add("main");
+
   const mainTextContainer = createEl("div");
   mainTextContainer.classList.add("main-text-container");
 
@@ -50,9 +61,10 @@ export function createMain () {
 
   mainTextContainer.append(mainTextHeader,mainText);
 
-  navBar.append(navEl1, navEl2, navEl3, navEl4, navEl5);
+  main.append(mainTextContainer);
 
-  main.append(navBar, mainTextContainer);
+  createNavBar();
 
   return main;
 }
+
