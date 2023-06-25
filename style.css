@@ -5,15 +5,25 @@
   
 }
 
-/* Define the animation keyframes */
-@keyframes slideIn {
+@keyframes zoomOut {
   0% {
-    opacity: 0;
-    transform: translateX(100%);
+    transform: scale(1);
+    opacity: 1;
   }
   100% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
     opacity: 1;
-    transform: translateX(0);
   }
 }
 
@@ -22,10 +32,37 @@
     opacity: 1;
     transform: translateX(0);
   }
+  50% {
+    transform: translateX(-100%) scale(0.8);
+    opacity: 0;
+  }
   100% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-100%) scale(0.8);
   }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%) scale(1.2);
+  }
+  50% {
+    transform: translateX(0) scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.slide-out {
+  animation-name: slideOut, zoomOut;
+}
+
+.slide-in {
+  animation-name: slideIn, zoomIn;
 }
 
 body {
@@ -43,13 +80,7 @@ body {
   animation-timing-function: ease-in-out;
 }
 
-.slide-out {
-  animation-name: slideOut;
-}
 
-.slide-in {
-  animation-name: slideIn;
-}
 
 header {
   position: fixed;

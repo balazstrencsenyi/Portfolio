@@ -27,22 +27,23 @@ export function buttonHandler() {
       setTimeout(() => {
         root.innerHTML = "";
 
+        if (selectedNavItem === "Home") {
+          createMain();
+        } else if (selectedNavItem === "Education") {
+          createEducation();
+        } else if (selectedNavItem === "Portfolio") {
+          createPortfolio();
+        } else if (selectedNavItem === "Experience") {
+          createExperience();
+        } else if (selectedNavItem === "Contact") {
+          createContact();
+        }
+
         root.classList.remove("slide-out");
         root.classList.add("slide-in"); // Apply the slide-in animation
 
         setTimeout(() => {
           root.classList.remove("slide-in");
-          if (selectedNavItem === "Home") {
-            createMain();
-          } else if (selectedNavItem === "Education") {
-            createEducation();
-          } else if (selectedNavItem === "Portfolio") {
-            createPortfolio();
-          } else if (selectedNavItem === "Experience") {
-            createExperience();
-          } else if (selectedNavItem === "Contact") {
-            createContact();
-          }
         }, 500); // Adjust the timeout duration to match the animation duration in CSS
       }, 500); // Adjust the timeout duration to match the animation duration in CSS
     });
@@ -105,7 +106,7 @@ export function createMain() {
 
   root.innerHTML = ""; // Clear root content
   root.style.height = "100vh";
-  root.append(createHeader(), main, createNavBar()); // Rebuild the content
+  root.append(main, createNavBar()); // Rebuild the content
 
   buttonHandler();
 
@@ -126,7 +127,7 @@ export function createEducation() {
   root.innerHTML = ""; // Clear root content
   //add a root height of 200vh to make the page scrollable only here
   root.style.height = "160vh";
-  root.append(createHeader(), educationPage, createNavBar()); // Rebuild the content
+  root.append(educationPage, createNavBar()); // Rebuild the content
 
   buttonHandler();
 
@@ -145,7 +146,7 @@ export function createPortfolio() {
 
   root.innerHTML = ""; // Clear root content
   root.style.height = "100vh";
-  root.append(createHeader(), portfolioPage, createNavBar()); // Rebuild the content
+  root.append(portfolioPage, createNavBar()); // Rebuild the content
 
   buttonHandler();
 
@@ -164,7 +165,7 @@ export function createExperience() {
 
   root.innerHTML = ""; // Clear root content
   root.style.height = "100vh";
-  root.append(createHeader(), experiencePage, createNavBar()); // Rebuild the content
+  root.append(experiencePage, createNavBar()); // Rebuild the content
 
   buttonHandler();
 
@@ -183,7 +184,7 @@ export function createContact() {
 
   root.innerHTML = ""; // Clear root content
   root.style.height = "100vh";
-  root.append(createHeader(), contactPage, createNavBar()); // Rebuild the content
+  root.append(contactPage, createNavBar()); // Rebuild the content
 
   buttonHandler();
 
