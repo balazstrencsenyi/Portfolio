@@ -15,24 +15,41 @@ export function buttonHandler() {
 
   navEls.forEach((navEl) => {
     navEl.addEventListener("click", (e) => {
-      root.innerHTML = "";
-      if (e.target.innerText === "Home") {
-        createMain();
-      } else if (e.target.innerText === "Education") {
-        createEducation();
-      } else if (e.target.innerText === "Portfolio") {
-        createPortfolio();
-      }
-      else if (e.target.innerText === "Experience") {
-        createExperience();
-      }
-      else if (e.target.innerText === "Contact") {
-        createContact();
-      }
-  
+      const selectedNavItem = e.target.innerText;
+
+      navEls.forEach((navEl) => {
+        navEl.classList.remove("active");
+      });
+      e.target.classList.add("active");
+
+      root.classList.add("slide-out"); // Apply the slide-out animation
+
+      setTimeout(() => {
+        root.innerHTML = "";
+
+        root.classList.remove("slide-out");
+        root.classList.add("slide-in"); // Apply the slide-in animation
+
+        setTimeout(() => {
+          root.classList.remove("slide-in");
+          if (selectedNavItem === "Home") {
+            createMain();
+          } else if (selectedNavItem === "Education") {
+            createEducation();
+          } else if (selectedNavItem === "Portfolio") {
+            createPortfolio();
+          } else if (selectedNavItem === "Experience") {
+            createExperience();
+          } else if (selectedNavItem === "Contact") {
+            createContact();
+          }
+        }, 500); // Adjust the timeout duration to match the animation duration in CSS
+      }, 500); // Adjust the timeout duration to match the animation duration in CSS
     });
   });
 }
+
+
 
 
 export function createNavBar() {
