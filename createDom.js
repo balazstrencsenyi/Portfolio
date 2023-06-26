@@ -304,6 +304,9 @@ export function createEducation() {
   root.append(educationPage); // Rebuild the content
 
   buttonHandler();
+  const header = createHeader();
+  header.style.backgroundColor = "rgba(0, 130, 86, 1)";
+
 
   return educationPage;
 }
