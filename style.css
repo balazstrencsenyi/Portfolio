@@ -329,3 +329,61 @@ a {
   width: 50px;
   cursor: pointer;
 }
+
+/*add media queery for mobile*/
+
+@media only screen and (max-width: 600px) {
+
+  .main {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-text-container {
+    width: 300px;
+    height: auto;
+  }
+
+  .nav-bar {
+    position: unset;
+    width: 100%;
+    margin-left: 10px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: end;
+    border: solid 1px rgba(255, 255, 255, 0.5);
+  }
+
+  .navEl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .education-page {
+    width: 300px;
+    height: 300px;
+  }
+
+  .portfolio-page {
+    width: 300px;
+    height: 300px;
+  }
+
+  .experience-page {
+    height: 200vh;
+  }
+
+  .contact-page {
+    width: 300px;
+    height: 300px;
+  }
+
+  .sap-container, .deloitte-container, .codecool-container {
+    width: 300px;
+  }
+}
