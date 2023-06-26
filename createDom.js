@@ -384,6 +384,7 @@ export function createRightNav() {
   const rightNavEl2Container = createEl("a");
   rightNavEl2Container.setAttribute("href", "https://github.com/balazstrencsenyi");
   rightNavEl2Container.classList.add("right-nav-el-container");
+  rightNavEl2Container.id = "right-nav-el2-container";
 
   const rightNavEl2 = createEl("img");
   rightNavEl2.classList.add("right-nav-el");
@@ -398,7 +399,7 @@ export function createRightNav() {
     if (window.innerWidth < 600) {
       rightNav.style.display = "none";
     } else {
-      rightNav.style.display = "block";
+      rightNav.style.display = ""; // Reset the display property to its default value
     }
   }
 
