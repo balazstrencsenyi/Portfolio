@@ -95,15 +95,15 @@ h1 {
 
 .scroll {
   transition: all 2s ease;
-  background-color: rgb(255, 255, 255);
-  color: black;
+  background-color: rgba(0, 130, 86, 1);
+  color: rgb(255, 255, 255);
 }
 
 header.scroll h1 {
   background: linear-gradient(
     111.4deg,
-    rgba(7, 7, 9, 1) 6.5%,
-    rgba(27, 24, 113, 1) 93.2%
+    rgb(255, 255, 255) 6.5%,
+    rgb(255, 255, 255) 93.2%
   );
   -webkit-background-clip: text; /* For Safari */
   -webkit-text-fill-color: transparent; /* For Safari */
