@@ -384,18 +384,26 @@ export function createRightNav() {
   const rightNavEl2Container = createEl("a");
   rightNavEl2Container.setAttribute("href", "https://github.com/balazstrencsenyi");
   rightNavEl2Container.classList.add("right-nav-el-container");
-  rightNavEl2Container.id = "right-nav-el2-container";
 
   const rightNavEl2 = createEl("img");
   rightNavEl2.classList.add("right-nav-el");
   rightNavEl2.setAttribute("src", "github.png");
-  rightNavEl2.id = "right-nav-el2";
 
   rightNavEl2Container.append(rightNavEl2);
 
   rightNav.append(rightNavEl1Container, rightNavEl2Container);
-
   root.append(rightNav);
+
+  function updateRightNavVisibility() {
+    if (window.innerWidth < 600) {
+      rightNav.style.display = "none";
+    } else {
+      rightNav.style.display = "block";
+    }
+  }
+
+  updateRightNavVisibility();
+  window.addEventListener("resize", updateRightNavVisibility);
 
   return rightNav;
 }
