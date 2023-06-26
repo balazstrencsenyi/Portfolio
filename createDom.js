@@ -131,9 +131,9 @@ export function createEducation() {
   // Clear the existing content inside root
   root.innerHTML = "";
   body.style.backgroundImage =
-    "linear-gradient(225deg, #1c060e 0%, #784BA0 50%, #000000 100%)";
-  root.style.backgroundImage =
-    "linear-gradient(225deg, #1c060e 0%, #784BA0 50%, #000000 100%)";
+    "linear-gradient(111.4deg,rgba(7, 7, 9, 1) 6.5%,rgba(27, 24, 113, 1) 93.2%)";
+    root.style.backgroundImage =
+    "linear-gradient(111.4deg,rgba(7, 7, 9, 1) 6.5%,rgba(27, 24, 113, 1) 93.2%)";
 
   root.append(educationPage); // Rebuild the content
 
@@ -184,10 +184,9 @@ export function createExperience() {
 
   root.innerHTML = ""; // Clear root content
 
-  body.style.backgroundImage =
-    "linear-gradient(19deg, #000000 0%, #1b1da4 100%)";
-  root.style.backgroundImage =
-    "linear-gradient(19deg, #000000 0%, #1b1da4 100%)";
+  root.style.backgroundImage = "linear-gradient(62deg, #7b4e7d 0%, #5f27a2 100%)";
+body.style.backgroundImage = "linear-gradient(62deg, #7b4e7d 0%, #5f27a2 100%)";
+
 
   root.style.height = "100vh";
   root.append(experiencePage); // Rebuild the content
