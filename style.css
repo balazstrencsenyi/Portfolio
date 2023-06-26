@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
 
 @keyframes zoomOut {
@@ -65,19 +64,20 @@
   animation-name: slideIn, zoomIn;
 }
 
-
 #root {
   display: flex;
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
+  background-image: linear-gradient(
+    111.4deg,
+    rgba(7, 7, 9, 1) 6.5%,
+    rgba(27, 24, 113, 1) 93.2%
+  );
   opacity: 1;
   animation-duration: 0.5s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
 }
-
-
 
 header {
   position: fixed;
@@ -94,8 +94,7 @@ header {
 h1 {
   font-size: 40px;
   color: white;
-  letter-spacing: .05em;
-  
+  letter-spacing: 0.05em;
 }
 
 .scroll {
@@ -105,13 +104,16 @@ h1 {
 }
 
 header.scroll h1 {
-  background: linear-gradient( 111.4deg,  rgba(7,7,9,1) 6.5%, rgba(27,24,113,1) 93.2% );
+  background: linear-gradient(
+    111.4deg,
+    rgba(7, 7, 9, 1) 6.5%,
+    rgba(27, 24, 113, 1) 93.2%
+  );
   -webkit-background-clip: text; /* For Safari */
   -webkit-text-fill-color: transparent; /* For Safari */
   background-clip: text;
-  letter-spacing: .05em;
+  letter-spacing: 0.05em;
 }
-
 
 .main {
   width: 100%;
@@ -119,7 +121,6 @@ header.scroll h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .nav-bar {
@@ -148,7 +149,6 @@ header.scroll h1 {
 .navEl:hover {
   background-color: white;
   color: black;
-
 }
 
 #upper-item {
@@ -223,8 +223,6 @@ header.scroll h1 {
   text-align: center;
   padding: 20px;
   flex-direction: column;
-
-
 }
 
 .experience-page {
@@ -243,7 +241,6 @@ header.scroll h1 {
   text-align: center;
   padding: 20px;
   flex-direction: column;
-
 }
 
 .contact-page {
@@ -263,8 +260,3 @@ header.scroll h1 {
   padding: 20px;
   flex-direction: column;
 }
-
-
-
-
-

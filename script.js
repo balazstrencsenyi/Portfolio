@@ -1,4 +1,10 @@
-import { createHeader, createMain, createEducation, createPortfolio, createNavBar } from "./createDom.js";
+import {
+  createHeader,
+  createMain,
+  createEducation,
+  createPortfolio,
+  createNavBar,
+} from "./createDom.js";
 import { whenScrolled } from "./scroll.js";
 
 export async function main() {
@@ -14,7 +20,6 @@ export async function main() {
   const main = createMain();
   root.appendChild(main);
 }
-  
 
 window.onload = async () => {
   await main();

@@ -104,7 +104,7 @@ export function createMain() {
 
   root.innerHTML = ""; // Clear root content
   body.style.backgroundImage =
-  "linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)";
+    "linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)";
   root.style.height = "100vh";
   root.style.backgroundImage =
     "linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)";
@@ -130,9 +130,10 @@ export function createEducation() {
 
   // Clear the existing content inside root
   root.innerHTML = "";
-  body.style.backgroundImage ="linear-gradient(225deg, #1c060e 0%, #784BA0 50%, #000000 100%)";
-root.style.backgroundImage= "linear-gradient(225deg, #1c060e 0%, #784BA0 50%, #000000 100%)";
-
+  body.style.backgroundImage =
+    "linear-gradient(225deg, #1c060e 0%, #784BA0 50%, #000000 100%)";
+  root.style.backgroundImage =
+    "linear-gradient(225deg, #1c060e 0%, #784BA0 50%, #000000 100%)";
 
   root.append(educationPage); // Rebuild the content
 
@@ -158,9 +159,10 @@ export function createPortfolio() {
   root.innerHTML = ""; // Clear root content
   root.style.height = "100vh";
 
-    body.style.backgroundImage ="linear-gradient(132deg, #F4D03F 0%, #16A085 100%)";
-    root.style.backgroundImage ="linear-gradient(132deg, #F4D03F 0%, #16A085 100%)";
-
+  body.style.backgroundImage =
+    "linear-gradient(132deg, #F4D03F 0%, #16A085 100%)";
+  root.style.backgroundImage =
+    "linear-gradient(132deg, #F4D03F 0%, #16A085 100%)";
 
   root.append(portfolioPage); // Rebuild the content
 
@@ -182,8 +184,10 @@ export function createExperience() {
 
   root.innerHTML = ""; // Clear root content
 
-  body.style.backgroundImage = "linear-gradient(19deg, #000000 0%, #1b1da4 100%)";
-  root.style.backgroundImage = "linear-gradient(19deg, #000000 0%, #1b1da4 100%)";
+  body.style.backgroundImage =
+    "linear-gradient(19deg, #000000 0%, #1b1da4 100%)";
+  root.style.backgroundImage =
+    "linear-gradient(19deg, #000000 0%, #1b1da4 100%)";
 
   root.style.height = "100vh";
   root.append(experiencePage); // Rebuild the content
@@ -205,8 +209,10 @@ export function createContact() {
   contactPage.append(contactText);
 
   root.innerHTML = ""; // Clear root content
-  body.style.backgroundImage = "linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)";
-  root.style.backgroundImage = "linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)";
+  body.style.backgroundImage =
+    "linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)";
+  root.style.backgroundImage =
+    "linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)";
 
   root.style.height = "100vh";
   root.append(contactPage); // Rebuild the content
