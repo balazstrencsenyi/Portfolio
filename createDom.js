@@ -119,12 +119,16 @@ export function createEducation() {
   educationPage.classList.add("education-page");
   educationPage.style.height = "auto"; // Set the height of educationPage
 
+  const educationTitle = createEl("div");
+  educationTitle.classList.add("education-title");
+  educationTitle.innerText = "My Educations";
+
   const educationText = createEl("div");
   educationText.classList.add("education-text");
   educationText.innerText =
     "I have completed my Bachelor's degree in Budapest University of Technology and Economics. To further enhance my skill set and pursue my passion for frontend development, I attended a Frontend Developer school at CodeCool. During this program, I received comprehensive training in various technologies and frameworks, including HTML, CSS, JavaScript, TypeScript, React, Node.js, Express, and REST API development.Through my education and practical experience, I have developed a solid understanding of frontend development principles and techniques. I am proficient in creating responsive and user-friendly web interfaces using HTML and CSS. I have a strong command of JavaScript, enabling me to develop interactive and dynamic web applications. Moreover, I am experienced in working with popular frontend frameworks such as React, which enables me to build efficient and modular applications. I have also gained expertise in backend development using Node.js and Express, allowing me to create robust server-side applications and RESTful APIs.Overall, my education and training have equipped me with a diverse skill set and a deep understanding of frontend development and related technologies. I am excited to apply my knowledge and contribute to impactful projects in the field.";
 
-  educationPage.append(educationText);
+  educationPage.append(educationTitle,educationText);
 
   // Clear the existing content inside root
   root.innerHTML = "";
