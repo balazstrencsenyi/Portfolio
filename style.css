@@ -97,7 +97,7 @@ h1 {
 
 .scroll {
   transition: all 2s ease;
-  background-color: rgba(0, 130, 86, 1);
+  background-color: rgba(146, 47, 182, 1);
   color: rgb(255, 255, 255);
   border-bottom: solid 1px rgba(255, 255, 255, 0.5);
 }
@@ -247,9 +247,8 @@ header.scroll h1 {
 .experience-page {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 110%;
   transform: translate(-50%, -50%);
-  border: solid 1px rgba(255, 255, 255, 0.5);
   height: auto;
   width: 400px;
   border-radius: 30px;
@@ -260,6 +259,7 @@ header.scroll h1 {
   text-align: center;
   padding: 20px;
   flex-direction: column;
+  gap: 40px;
 }
 
 .contact-page {
@@ -288,4 +288,22 @@ a {
   border-radius: 30px;
   padding: 20px;
 
+}
+
+.sap-container {
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.deloitte-container {
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.codecool-container {
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  border-radius: 30px;
+  padding: 20px;
 }

@@ -174,9 +174,74 @@ export function createExperience() {
   const experienceText = createEl("div");
   experienceText.classList.add("experience-text");
   experienceText.innerText =
-    "This is my experience page where I will showcase my jobs. Stay tuned! ";
+    "My Experiences ";
 
-  experiencePage.append(experienceText);
+    const sapContainer = createEl("div");
+    sapContainer.classList.add("sap-container");
+
+    const experienceDate = createEl("div");
+    experienceDate.classList.add("experience-date");
+    experienceDate.innerText = "2021 - 2022";
+
+    const experienceTitle = createEl("div");
+    experienceTitle.classList.add("experience-title");
+    experienceTitle.innerText = "SAP Business Analyst";
+
+    const experienceCompany = createEl("div");
+    experienceCompany.classList.add("experience-company");
+    experienceCompany.innerText = "KPMG";
+
+    const sapDetails = createEl("div");
+    sapDetails.classList.add("sap-details");
+    sapDetails.innerText = "Over these Period, I had been on a major implementation project. My tasks included assessing client needs, facilitating communication between them and developers, ensuring new requests align with client requirements, and participating in client presentations. This project has allowed me to contribute to successful goal implementation with clear and consistent communication."
+
+    sapContainer.append(experienceDate, experienceTitle, experienceCompany, sapDetails);
+
+    const deloitteContainer = createEl("div");
+    deloitteContainer.classList.add("deloitte-container");
+
+    const experienceDate2 = createEl("div");
+    experienceDate2.classList.add("experience-date");
+    experienceDate2.innerText = "2022";
+
+    const experienceTitle2 = createEl("div");
+    experienceTitle2.classList.add("experience-title");
+    experienceTitle2.innerText = "Audit Analyst";
+
+    const experienceCompany2 = createEl("div");
+    experienceCompany2.classList.add("experience-company");
+    experienceCompany2.innerText = "Deloitte";
+
+    const deloitteDetails = createEl("div");
+    deloitteDetails.classList.add("deloitte-details");
+    deloitteDetails.innerText = "As a Junior Auditor at Deloitte, I had the chance to dive deeper into the world of finance, working closely with experienced team members to analyze yearly reports. My time at Deloitte taught me the importance of integrity, goal achievement, teamwork, and familiarized me with various financial software applications"
+
+    deloitteContainer.append(experienceDate2, experienceTitle2, experienceCompany2, deloitteDetails);
+
+    const codecoolContainer = createEl("div");
+    codecoolContainer.classList.add("codecool-container");
+
+    const experienceDate3 = createEl("div");
+    experienceDate3.classList.add("experience-date");
+    experienceDate3.innerText = "2023";
+
+    const experienceTitle3 = createEl("div");
+    experienceTitle3.classList.add("experience-title");
+    experienceTitle3.innerText = "Frontend Developer";
+
+    const experienceCompany3 = createEl("div");
+    experienceCompany3.classList.add("experience-company");
+    experienceCompany3.innerText = "CodeCool";
+
+    const codecoolDetails = createEl("div");
+    codecoolDetails.classList.add("codecool-details");
+    codecoolDetails.innerText = "During my tenure at Codecool, I have acquired extensive experience in both individual and collaborative web development, thereby fostering my proficiency in a wide range of technologies such as HTML5, CSS3, SVG, JavaScript, React.js, Node.js / NPM, Express.js. Additionally, I have employed Git and GitHub as valuable tools for version control and collaborative work. This comprehensive course has equipped me with a solid foundation in web development, empowering me to construct dynamic websites and applications with ease. In particular, the course structure incorporated biweekly team projects, which not only honed my teamwork skills but also provided valuable opportunities to showcase our collective efforts before esteemed Mentors. Our collaborative endeavors primarily focused on real-world tasks, allowing us to actively troubleshoot and resolve complex problems as a cohesive unit. For a more in-depth review of my work, I invite you to peruse my GitHub page at: https://github.com/balazstrencsenyi."
+
+    codecoolContainer.append(experienceDate3, experienceTitle3, experienceCompany3, codecoolDetails);
+
+
+
+  experiencePage.append(experienceText, sapContainer, deloitteContainer, codecoolContainer);
 
   root.innerHTML = ""; // Clear root content
 
