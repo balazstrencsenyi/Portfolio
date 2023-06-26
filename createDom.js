@@ -46,10 +46,11 @@ export function createHeader() {
     }
   }
 
+  menuButton.addEventListener("click", toggleMenu)
+
   updateMenuButtonVisibility();
   window.addEventListener("resize", updateMenuButtonVisibility);
 
-  menuButton.addEventListener("click", toggleMenu);
 
   // Define an array of menu items
   const menuItems = [
@@ -60,6 +61,7 @@ export function createHeader() {
     { text: "Contact" },
   ];
 
+
   createMobileMenu(menuItems); // Pass the menu items to createMobileMenu
 
   return header;
@@ -67,19 +69,17 @@ export function createHeader() {
 let mobileMenuVisible = false; // Track the visibility state of the mobile menu
 let mobileMenu = null; // Track the reference to the mobile menu element
 
-function toggleMenu() {
+export function toggleMenu() {
+  const mobileMenu = document.getElementById("mobile-menu");
   if (mobileMenu) {
-    // If the mobile menu already exists, toggle its visibility
-    if (mobileMenuVisible) {
-      mobileMenu.style.display = "none"; // Hide the mobile menu
+    if (mobileMenu.style.display === "none") {
+      mobileMenu.style.display = "block";
     } else {
-      mobileMenu.style.display = "block"; // Show the mobile menu
+      mobileMenu.style.display = "none";
     }
-    mobileMenuVisible = !mobileMenuVisible; // Toggle the visibility state
   } else {
-    // If the mobile menu doesn't exist, create it
     mobileMenu = createMobileMenu();
-    mobileMenuVisible = true; // Set the visibility state to true since it's being created
+    mobileMenuVisible = true;
   }
 }
 
@@ -118,19 +118,26 @@ export function createMobileMenu() {
   );
   root.append(mobileMenu);
 
-  mobileMenuEl1.addEventListener("click", () => handleMobileMenuClick("Home"));
-  mobileMenuEl2.addEventListener("click", () =>
-    handleMobileMenuClick("Education")
-  );
-  mobileMenuEl3.addEventListener("click", () =>
-    handleMobileMenuClick("Portfolio")
-  );
-  mobileMenuEl4.addEventListener("click", () =>
-    handleMobileMenuClick("Experience")
-  );
-  mobileMenuEl5.addEventListener("click", () =>
-    handleMobileMenuClick("Contact")
-  );
+  mobileMenuEl1.addEventListener("click", () => {
+    handleMobileMenuClick("Home");
+    toggleMenu();
+  });
+  mobileMenuEl2.addEventListener("click", () => {
+    handleMobileMenuClick("Education");
+    toggleMenu();
+  });
+  mobileMenuEl3.addEventListener("click", () => {
+    handleMobileMenuClick("Portfolio");
+    toggleMenu();
+  });
+  mobileMenuEl4.addEventListener("click", () => {
+    handleMobileMenuClick("Experience");
+    toggleMenu();
+  });
+  mobileMenuEl5.addEventListener("click", () => {
+    handleMobileMenuClick("Contact");
+    toggleMenu();
+  });
 
   return mobileMenu;
 }
