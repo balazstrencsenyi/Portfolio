@@ -103,11 +103,9 @@ export function createMain() {
   main.append(mainTextContainer);
 
   root.innerHTML = ""; // Clear root content
-  body.style.backgroundImage =
-    "linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)";
-  root.style.height = "100vh";
-  root.style.backgroundImage =
-    "linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)";
+
+    body.style.backgroundColor = "rgb(0, 128, 255)";
+    root.style.backgroundColor = "rgb(0, 128, 255)";
 
   root.append(main); // Rebuild the content
 
@@ -130,10 +128,8 @@ export function createEducation() {
 
   // Clear the existing content inside root
   root.innerHTML = "";
-  body.style.backgroundImage =
-    "linear-gradient(111.4deg,rgba(7, 7, 9, 1) 6.5%,rgba(27, 24, 113, 1) 93.2%)";
-    root.style.backgroundImage =
-    "linear-gradient(111.4deg,rgba(7, 7, 9, 1) 6.5%,rgba(27, 24, 113, 1) 93.2%)";
+    root.style.backgroundColor = "rgba(0, 130, 86, 1)";
+    body.style.backgroundColor = "rgba(0, 130, 86, 1)";
 
   root.append(educationPage); // Rebuild the content
 
@@ -159,10 +155,9 @@ export function createPortfolio() {
   root.innerHTML = ""; // Clear root content
   root.style.height = "100vh";
 
-  body.style.backgroundImage =
-    "linear-gradient(132deg, #F4D03F 0%, #16A085 100%)";
-  root.style.backgroundImage =
-    "linear-gradient(132deg, #F4D03F 0%, #16A085 100%)";
+    body.style.backgroundColor = "rgba(138, 51, 237, 1)";
+    root.style.backgroundColor = "rgba(138, 51, 237, 1)";
+    
 
   root.append(portfolioPage); // Rebuild the content
 
@@ -184,9 +179,8 @@ export function createExperience() {
 
   root.innerHTML = ""; // Clear root content
 
-  root.style.backgroundImage = "linear-gradient(62deg, #7b4e7d 0%, #5f27a2 100%)";
-body.style.backgroundImage = "linear-gradient(62deg, #7b4e7d 0%, #5f27a2 100%)";
-
+  body.style.backgroundColor = "rgba(146, 47, 182, 1)";
+  root.style.backgroundColor = "rgba(146, 47, 182, 1)";
 
   root.style.height = "100vh";
   root.append(experiencePage); // Rebuild the content
@@ -208,10 +202,8 @@ export function createContact() {
   contactPage.append(contactText);
 
   root.innerHTML = ""; // Clear root content
-  body.style.backgroundImage =
-    "linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)";
-  root.style.backgroundImage =
-    "linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)";
+    body.style.backgroundColor = "RGBA(71, 77, 191, 1)";
+    root.style.backgroundColor = "RGBA(71, 77, 191, 1)";
 
   root.style.height = "100vh";
   root.append(contactPage); // Rebuild the content
