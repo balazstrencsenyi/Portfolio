@@ -399,6 +399,39 @@ a {
   border-radius: 0 0 10px 10px;
 }
 
+@media only screen and (max-width: 600px) {
+
+  .main-text-container {
+    width: 320px;
+    height: auto;
+  }
+
+  .education-page {
+    width: 320px;
+    height: auto;
+    margin-top: 450px;
+  }
+
+  .sap-container {
+    width: 320px;
+    height: auto;
+    margin-top: 370px;
+  }
+
+  .deloitte-container {
+    width: 320px;
+    height: auto;
+  }
+
+  .codecool-container {
+    width: 320px;
+    height: auto;
+  }
+
+}
+
+
+
 
 /*add media queery for mobile
 
