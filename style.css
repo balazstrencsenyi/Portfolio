@@ -388,7 +388,7 @@ a {
 
 .mobile-menu-el:hover {
   cursor: pointer;
-  background-color: rgba(255, 5, 5, 0.4);
+  background-color: rgba(255, 5, 5, 0.41);
 }
 
 #upper-item-mobile {
