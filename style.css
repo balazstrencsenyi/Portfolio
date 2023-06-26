@@ -433,6 +433,10 @@ a {
     height: auto;
   }
 
+  .nav-bar {
+    display: none;
+  }
+
 }
 
 
