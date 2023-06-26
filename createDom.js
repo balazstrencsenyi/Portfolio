@@ -5,8 +5,10 @@ const body = document.querySelector("body");
 
 let navBarVisible = true;
 
-export function createHeader() {
+export function createHeader(backgroundColor) {
   const header = createEl("header");
+  header.style.backgroundColor = backgroundColor;
+
   const h1 = createEl("h1");
   h1.innerText = "Portfolio";
   header.append(h1);
@@ -304,12 +306,13 @@ export function createEducation() {
   root.append(educationPage); // Rebuild the content
 
   buttonHandler();
-  const header = createHeader();
-  header.style.backgroundColor = "rgba(0, 130, 86, 1)";
 
+  const header = createHeader("rgba(0, 130, 86, 1)"); // Change the background color of the header to match the education page
+  root.prepend(header); // Add the header at the beginning of the root element
 
   return educationPage;
 }
+
 
 export function createPortfolio() {
   const portfolioPage = createEl("div");
