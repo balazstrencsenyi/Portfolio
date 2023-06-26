@@ -437,6 +437,11 @@ a {
     display: none;
   }
 
+  button {
+    position: absolute;
+    right: 50px;
+  }
+
 }
 
 
