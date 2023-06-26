@@ -310,11 +310,10 @@ export function createEducation() {
   const header = createHeader("rgba(0, 130, 86, 1)"); // Change the background color of the header to match the education page
   header.style.zIndex = "1";
   root.prepend(header); // Add the header at the beginning of the root element
-    
-    
 
   return educationPage;
 }
+
 
 
 export function createPortfolio() {
