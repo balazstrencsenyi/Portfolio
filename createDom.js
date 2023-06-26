@@ -1,6 +1,7 @@
 import { createEl } from "./utils.js";
 
 const root = document.querySelector("#root");
+const body = document.querySelector("body");
 
 export function createHeader() {
   const header = createEl("header");
@@ -49,9 +50,6 @@ export function buttonHandler() {
     });
   });
 }
-
-
-
 
 export function createNavBar() {
   const navBar = createEl("div");
@@ -105,7 +103,12 @@ export function createMain() {
   main.append(mainTextContainer);
 
   root.innerHTML = ""; // Clear root content
+  body.style.backgroundImage =
+  "linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)";
   root.style.height = "100vh";
+  root.style.backgroundImage =
+    "linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)";
+
   root.append(main); // Rebuild the content
 
   buttonHandler();
@@ -127,6 +130,9 @@ export function createEducation() {
 
   // Clear the existing content inside root
   root.innerHTML = "";
+  body.style.backgroundImage ="linear-gradient(225deg, #1c060e 0%, #784BA0 50%, #000000 100%)";
+root.style.backgroundImage= "linear-gradient(225deg, #1c060e 0%, #784BA0 50%, #000000 100%)";
+
 
   root.append(educationPage); // Rebuild the content
 
@@ -134,9 +140,6 @@ export function createEducation() {
 
   return educationPage;
 }
-
-
-
 
 export function createPortfolio() {
   const portfolioPage = createEl("div");
@@ -150,11 +153,15 @@ export function createPortfolio() {
   portfolioText2.classList.add("portfolio-text");
   portfolioText2.innerText = " ";
 
-
   portfolioPage.append(portfolioText);
 
   root.innerHTML = ""; // Clear root content
   root.style.height = "100vh";
+
+    body.style.backgroundImage ="linear-gradient(132deg, #F4D03F 0%, #16A085 100%)";
+    root.style.backgroundImage ="linear-gradient(132deg, #F4D03F 0%, #16A085 100%)";
+
+
   root.append(portfolioPage); // Rebuild the content
 
   buttonHandler();
@@ -168,11 +175,16 @@ export function createExperience() {
 
   const experienceText = createEl("div");
   experienceText.classList.add("experience-text");
-  experienceText.innerText = "This is my experience page where I will showcase my jobs. Stay tuned! ";
+  experienceText.innerText =
+    "This is my experience page where I will showcase my jobs. Stay tuned! ";
 
   experiencePage.append(experienceText);
 
   root.innerHTML = ""; // Clear root content
+
+  body.style.backgroundImage = "linear-gradient(19deg, #000000 0%, #1b1da4 100%)";
+  root.style.backgroundImage = "linear-gradient(19deg, #000000 0%, #1b1da4 100%)";
+
   root.style.height = "100vh";
   root.append(experiencePage); // Rebuild the content
 
@@ -187,11 +199,15 @@ export function createContact() {
 
   const contactText = createEl("div");
   contactText.classList.add("contact-text");
-  contactText.innerText = "This is my contact page where I will showcase my contacts. Stay tuned! ";
+  contactText.innerText =
+    "This is my contact page where I will showcase my contacts. Stay tuned! ";
 
   contactPage.append(contactText);
 
   root.innerHTML = ""; // Clear root content
+  body.style.backgroundImage = "linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)";
+  root.style.backgroundImage = "linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)";
+
   root.style.height = "100vh";
   root.append(contactPage); // Rebuild the content
 
@@ -199,5 +215,3 @@ export function createContact() {
 
   return contactPage;
 }
-
-
