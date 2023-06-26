@@ -409,8 +409,13 @@ a {
   .education-page {
     width: 320px;
     height: auto;
-    margin-top: 450px;
+    margin-top: 650px;
   }
+
+  .experience-page {
+    height: 230vh;
+  }
+  
 
   .sap-container {
     width: 320px;
