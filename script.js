@@ -1,4 +1,4 @@
-import { createHeader, createMain, createEducation, createPortfolio } from "./createDom.js";
+import { createHeader, createMain, createEducation, createPortfolio, createNavBar } from "./createDom.js";
 import { whenScrolled } from "./scroll.js";
 
 export async function main() {
@@ -7,6 +7,9 @@ export async function main() {
 
   const header = createHeader();
   body.appendChild(header);
+
+  const navBar = createNavBar();
+  body.appendChild(navBar);
 
   const main = createMain();
   root.appendChild(main);

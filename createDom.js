@@ -106,7 +106,7 @@ export function createMain() {
 
   root.innerHTML = ""; // Clear root content
   root.style.height = "100vh";
-  root.append(main, createNavBar()); // Rebuild the content
+  root.append(main); // Rebuild the content
 
   buttonHandler();
 
@@ -128,7 +128,7 @@ export function createEducation() {
   // Clear the existing content inside root
   root.innerHTML = "";
 
-  root.append(educationPage, createNavBar()); // Rebuild the content
+  root.append(educationPage); // Rebuild the content
 
   buttonHandler();
 
@@ -143,14 +143,19 @@ export function createPortfolio() {
   portfolioPage.classList.add("portfolio-page");
 
   const portfolioText = createEl("div");
-  portfolioText.classList.add("portfolio-text");
-  portfolioText.innerText = "This is my portfolio page where I will showcase my projects. Stay tuned!";
+  portfolioText.classList.add("portfolio-title");
+  portfolioText.innerText = "Wishversum.com";
+
+  const portfolioText2 = createEl("div");
+  portfolioText2.classList.add("portfolio-text");
+  portfolioText2.innerText = " ";
+
 
   portfolioPage.append(portfolioText);
 
   root.innerHTML = ""; // Clear root content
   root.style.height = "100vh";
-  root.append(portfolioPage, createNavBar()); // Rebuild the content
+  root.append(portfolioPage); // Rebuild the content
 
   buttonHandler();
 
@@ -169,7 +174,7 @@ export function createExperience() {
 
   root.innerHTML = ""; // Clear root content
   root.style.height = "100vh";
-  root.append(experiencePage, createNavBar()); // Rebuild the content
+  root.append(experiencePage); // Rebuild the content
 
   buttonHandler();
 
@@ -188,7 +193,7 @@ export function createContact() {
 
   root.innerHTML = ""; // Clear root content
   root.style.height = "100vh";
-  root.append(contactPage, createNavBar()); // Rebuild the content
+  root.append(contactPage); // Rebuild the content
 
   buttonHandler();
 
