@@ -3,13 +3,61 @@ import { createEl } from "./utils.js";
 const root = document.querySelector("#root");
 const body = document.querySelector("body");
 
+let navBarVisible = true;
+
 export function createHeader() {
   const header = createEl("header");
   const h1 = createEl("h1");
   h1.innerText = "Portfolio";
   header.append(h1);
+
+  const menuButton = createEl("button");
+  menuButton.classList.add("menu-button");
+  menuButton.innerText = "Menu";
+  header.append(menuButton);
+
+  function updateMenuButtonVisibility() {
+    if (window.innerWidth < 600) {
+      menuButton.style.display = "block";
+      hideNavBar();
+    } else {
+      menuButton.style.display = "none";
+      showNavBar();
+    }
+  }
+
+  function hideNavBar() {
+    if (navBarVisible) {
+      const navBar = document.getElementById("navbar");
+      if (navBar) {
+        navBar.style.display = "none";
+        navBarVisible = false;
+      }
+    }
+  }
+
+  function showNavBar() {
+    if (!navBarVisible) {
+      const navBar = document.getElementById("navbar");
+      if (navBar) {
+        navBar.style.display = "block";
+        navBarVisible = true;
+      }
+    }
+  }
+
+  updateMenuButtonVisibility();
+  window.addEventListener("resize", updateMenuButtonVisibility);
+
+  menuButton.addEventListener("click", toggleMenu);
+
   return header;
 }
+
+function toggleMenu() {
+  // Logic to toggle the menu display
+}
+
 
 export function buttonHandler() {
   const navEls = document.querySelectorAll(".navEl");
@@ -54,6 +102,7 @@ export function buttonHandler() {
 export function createNavBar() {
   const navBar = createEl("div");
   navBar.classList.add("nav-bar");
+  navBar.setAttribute("id", "navbar");
 
   const navEl1 = createEl("div");
   navEl1.classList.add("navEl");
