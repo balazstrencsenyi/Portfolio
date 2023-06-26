@@ -117,12 +117,12 @@ export function createMain() {
 export function createEducation() {
   const educationPage = createEl("div");
   educationPage.classList.add("education-page");
-  educationPage.style.height = "105vh"; // Set the height of educationPage
+  educationPage.style.height = "auto"; // Set the height of educationPage
 
   const educationText = createEl("div");
   educationText.classList.add("education-text");
   educationText.innerText =
-    "I have completed my Bachelor's degree in Budapest University of Technology and Economics, where I gained a strong foundation in computer science and technology. Additionally, I have obtained a degree in Logistics Management, which has provided me with valuable knowledge and skills in the field of supply chain management. To further enhance my skill set and pursue my passion for frontend development, I attended a Frontend Developer school at CodeCool. During this program, I received comprehensive training in various technologies and frameworks, including HTML, CSS, JavaScript, TypeScript, React, Node.js, Express, and REST API development.Through my education and practical experience, I have developed a solid understanding of frontend development principles and techniques. I am proficient in creating responsive and user-friendly web interfaces using HTML and CSS. I have a strong command of JavaScript, enabling me to develop interactive and dynamic web applications. My knowledge of TypeScript allows me to write scalable and maintainable code with static typing.Moreover, I am experienced in working with popular frontend frameworks such as React, which enables me to build efficient and modular applications. I have also gained expertise in backend development using Node.js and Express, allowing me to create robust server-side applications and RESTful APIs.Overall, my education and training have equipped me with a diverse skill set and a deep understanding of frontend development and related technologies. I am excited to apply my knowledge and contribute to impactful projects in the field.";
+    "I have completed my Bachelor's degree in Budapest University of Technology and Economics. To further enhance my skill set and pursue my passion for frontend development, I attended a Frontend Developer school at CodeCool. During this program, I received comprehensive training in various technologies and frameworks, including HTML, CSS, JavaScript, TypeScript, React, Node.js, Express, and REST API development.Through my education and practical experience, I have developed a solid understanding of frontend development principles and techniques. I am proficient in creating responsive and user-friendly web interfaces using HTML and CSS. I have a strong command of JavaScript, enabling me to develop interactive and dynamic web applications. My knowledge of TypeScript allows me to write scalable and maintainable code with static typing.Moreover, I am experienced in working with popular frontend frameworks such as React, which enables me to build efficient and modular applications. I have also gained expertise in backend development using Node.js and Express, allowing me to create robust server-side applications and RESTful APIs.Overall, my education and training have equipped me with a diverse skill set and a deep understanding of frontend development and related technologies. I am excited to apply my knowledge and contribute to impactful projects in the field.";
 
   educationPage.append(educationText);
 
@@ -142,15 +142,16 @@ export function createPortfolio() {
   const portfolioPage = createEl("div");
   portfolioPage.classList.add("portfolio-page");
 
-  const portfolioText = createEl("div");
+  const portfolioText = createEl("a");
+  portfolioText.setAttribute("href", "https://wishversum.onrender.com/");
   portfolioText.classList.add("portfolio-title");
-  portfolioText.innerText = "Wishversum.com";
+  portfolioText.innerText = "https://wishversum.onrender.com/";
 
   const portfolioText2 = createEl("div");
   portfolioText2.classList.add("portfolio-text");
-  portfolioText2.innerText = " ";
+  portfolioText2.innerText = "This is an ongoing private project that primarily utilizes Vanilla JavaScript, modular components, and incorporates some Node.js functionality for form implementation.";
 
-  portfolioPage.append(portfolioText);
+  portfolioPage.append(portfolioText, portfolioText2);
 
   root.innerHTML = ""; // Clear root content
   root.style.height = "100vh";
