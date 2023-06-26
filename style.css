@@ -400,7 +400,7 @@ a {
 }
 
 
-/*add media queery for mobile*/
+/*add media queery for mobile
 
 @media only screen and (max-width: 600px) {
 
@@ -456,4 +456,5 @@ a {
   .sap-container, .deloitte-container, .codecool-container {
     width: 300px;
   }
-}
+  
+} */
