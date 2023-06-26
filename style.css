@@ -269,16 +269,16 @@ header.scroll h1 {
   top: 50%;
   transform: translate(-50%, -50%);
   border: solid 1px rgba(255, 255, 255, 0.5);
-  height: auto;
-  width: 400px;
+  height: 300px;
+  width: 300px;
   border-radius: 30px;
+  gap: 25px;
   color: white;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 20px;
-  flex-direction: column;
 }
 
 a {
@@ -316,4 +316,16 @@ a {
 
 .experience-company {
   font-size: 20px;
+}
+
+.linkedin-container, .github-container, .phone-container, .email-container {
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.phone-icon, .email-icon, .github-icon, .linkedin-icon {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
 }

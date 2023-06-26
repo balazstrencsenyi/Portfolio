@@ -264,12 +264,47 @@ export function createContact() {
   const contactPage = createEl("div");
   contactPage.classList.add("contact-page");
 
-  const contactText = createEl("div");
-  contactText.classList.add("contact-text");
-  contactText.innerText =
-    "This is my contact page where I will showcase my contacts. Stay tuned! ";
+  const linkedinContainer = createEl("a");
+  linkedinContainer.setAttribute("href", "https://www.linkedin.com/in/balazstrencsenyi/");
+  linkedinContainer.classList.add("linkedin-container");
 
-  contactPage.append(contactText);
+  const linkedinIcon = createEl("img");
+  linkedinIcon.classList.add("linkedin-icon");
+  linkedinIcon.setAttribute("src", "linkedin.png");
+
+  linkedinContainer.append(linkedinIcon);
+
+  const githubContainer = createEl("a");
+  githubContainer.setAttribute("href", "https://github.com/balazstrencsenyi");
+  githubContainer.classList.add("github-container");
+
+  const githubIcon = createEl("img");
+  githubIcon.classList.add("github-icon");
+  githubIcon.setAttribute("src", "github.png");
+
+  githubContainer.append(githubIcon);
+
+  const phoneContainer = createEl("a");
+  phoneContainer.setAttribute("href", "+36302631920");
+  phoneContainer.classList.add("phone-container");
+
+  const phoneIcon = createEl("img");
+  phoneIcon.classList.add("phone-icon");
+  phoneIcon.setAttribute("src", "phone.png");
+
+  phoneContainer.append(phoneIcon);
+
+  const emailContainer = createEl("a");
+  emailContainer.setAttribute("href", "balazs.codecool@gmail.com");
+  emailContainer.classList.add("email-container");
+
+  const emailIcon = createEl("img");
+  emailIcon.classList.add("email-icon");
+  emailIcon.setAttribute("src", "gmail.png");
+
+  emailContainer.append(emailIcon);
+
+  contactPage.append(linkedinContainer, githubContainer, phoneContainer, emailContainer);
 
   root.innerHTML = ""; // Clear root content
     body.style.backgroundColor = "RGBA(71, 77, 191, 1)";
