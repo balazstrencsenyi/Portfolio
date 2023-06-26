@@ -4,6 +4,7 @@ import {
   createEducation,
   createPortfolio,
   createNavBar,
+  createRightNav,
 } from "./createDom.js";
 import { whenScrolled } from "./scroll.js";
 
@@ -16,6 +17,9 @@ export async function main() {
 
   const navBar = createNavBar();
   body.appendChild(navBar);
+
+  const rightNav = createRightNav();
+  body.appendChild(rightNav);
 
   const main = createMain();
   root.appendChild(main);

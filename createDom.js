@@ -317,3 +317,36 @@ export function createContact() {
 
   return contactPage;
 }
+
+export function createRightNav() {
+  const rightNav = createEl("div");
+  rightNav.classList.add("right-nav");
+
+  const rightNavEl1Container = createEl("a");
+  rightNavEl1Container.setAttribute("href", "https://www.linkedin.com/in/balazstrencsenyi/");
+  rightNavEl1Container.classList.add("right-nav-el-container");
+
+  const rightNavEl1 = createEl("img");
+  rightNavEl1.classList.add("right-nav-el");
+  rightNavEl1.setAttribute("src", "linkedin.png");
+
+  rightNavEl1Container.append(rightNavEl1);
+
+  const rightNavEl2Container = createEl("a");
+  rightNavEl2Container.setAttribute("href", "https://github.com/balazstrencsenyi");
+  rightNavEl2Container.classList.add("right-nav-el-container");
+  rightNavEl2Container.id = "right-nav-el2-container";
+
+  const rightNavEl2 = createEl("img");
+  rightNavEl2.classList.add("right-nav-el");
+  rightNavEl2.setAttribute("src", "github.png");
+  rightNavEl2.id = "right-nav-el2";
+
+  rightNavEl2Container.append(rightNavEl2);
+
+  rightNav.append(rightNavEl1Container, rightNavEl2Container);
+
+  root.append(rightNav);
+
+  return rightNav;
+}
